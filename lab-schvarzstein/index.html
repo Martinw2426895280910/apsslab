@@ -46,7 +46,7 @@
       background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.45) 50%,
+        rgba(255, 255, 255, 0.5) 50%,
         rgba(255, 255, 255, 0) 100%
       );
       animation: shimmer-sweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -55,42 +55,28 @@
 
     /* Pulsación viva con aura */
     @keyframes aura-pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
-      }
-      70% {
-        box-shadow: 0 0 0 16px rgba(16, 185, 129, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 18px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
     .pulse-glow-emerald {
       animation: aura-pulse 2s infinite;
-    }
-
-    /* Fondo con patrón sutil de laboratorio */
-    .bg-lab-mesh {
-      background-color: #0b1528;
-      background-image: radial-gradient(at 10% 20%, rgba(14, 165, 233, 0.25) 0px, transparent 50%),
-                        radial-gradient(at 90% 80%, rgba(16, 185, 129, 0.2) 0px, transparent 50%),
-                        radial-gradient(at 50% 50%, rgba(99, 102, 241, 0.15) 0px, transparent 50%);
     }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-900 font-sans antialiased pb-28 md:pb-12 text-base sm:text-lg">
 
   <!-- AVISO DE ATENCIÓN DIRECTA WHATSAPP CON DIRECCIÓN LOCAL -->
-  <header class="bg-emerald-800 text-white py-2.5 px-4 text-center text-sm sm:text-base font-semibold border-b border-emerald-700/50">
-    <div class="max-w-4xl mx-auto flex items-center justify-center gap-2">
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-ping shrink-0"></span>
+  <header class="bg-emerald-900 text-white py-2.5 px-4 text-center text-sm sm:text-base font-semibold border-b border-emerald-800">
+    <div class="max-w-5xl mx-auto flex items-center justify-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
       <span>Paso de los Libres, Corrientes · Sarmiento 902 · WhatsApp: <strong>3772-636749</strong></span>
     </div>
   </header>
 
   <!-- NAVEGACIÓN SIMPLE CON TEXTOS GRANDES -->
   <nav class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-4 py-3.5 shadow-xs">
-    <div class="max-w-4xl mx-auto flex items-center justify-between">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
       <a href="#" class="flex items-center gap-2.5 text-slate-900 font-extrabold text-xl sm:text-2xl tracking-tight">
         <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shrink-0 shadow-md shadow-emerald-600/20">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
@@ -110,37 +96,40 @@
     </div>
   </nav>
 
-  <!-- HERO CON IMAGEN DE FONDO REAL Y GRADIENTE -->
-  <header class="relative bg-lab-mesh text-white py-14 sm:py-20 px-4 overflow-hidden border-b border-slate-800">
-    <!-- Capa de imagen de laboratorio con mezcla -->
-    <div class="absolute inset-0 opacity-25 mix-blend-overlay bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1600&q=80');"></div>
-    
-    <!-- Resplandor sutil de fondo -->
-    <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- PORTADA CON IMAGEN DE FONDO REAL FOTOGRÁFICA CLARA Y VISTOSA -->
+  <header class="relative text-white py-16 sm:py-24 px-4 overflow-hidden border-b border-slate-800 shadow-2xl">
+    <!-- IMAGEN DE FONDO FOTOGRÁFICA ULTRA NÍTIDA -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('images/hero_modern_lab_1790682107345.jpg'), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80');"
+    ></div>
 
-    <div class="max-w-4xl mx-auto relative z-10 space-y-5 text-center sm:text-left">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/20 text-emerald-300 text-sm font-bold rounded-full border border-emerald-400/30 backdrop-blur-md">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <!-- Gradiente semi-transparente luminoso para que la foto se aprecie nítidamente -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-slate-900/50"></div>
+    <div class="absolute inset-0 bg-emerald-950/25"></div>
+
+    <div class="max-w-5xl mx-auto relative z-10 space-y-6 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600/90 text-white text-sm font-bold rounded-full border border-emerald-400 backdrop-blur-md shadow-lg">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-ping"></span>
         Sarmiento 902 · Paso de los Libres, Corrientes
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight drop-shadow-md">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight" style="text-shadow: 0 3px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8);">
         Análisis clínicos y chequeos en Paso de los Libres
       </h1>
 
-      <p class="text-lg sm:text-2xl text-slate-200 font-medium leading-relaxed max-w-2xl drop-shadow">
-        Cotizá tus análisis o enviá tu orden médica directamente por WhatsApp al <strong class="text-emerald-400 font-bold">3772-636749</strong>. Resultados rápidos y extracciones a domicilio.
+      <p class="text-lg sm:text-2xl text-white font-semibold leading-relaxed max-w-3xl" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+        Cotizá tus análisis o enviá tu orden médica directamente por WhatsApp al <strong class="text-emerald-300 font-extrabold underline underline-offset-4">3772-636749</strong>. Marcadores tumorales, perfiles completos de hombres y mujeres (con exudado vaginal), y extracciones a domicilio.
       </p>
 
-      <!-- BOTÓN GIGANTE PULSÁTIL CON DESTELLO (CALL TO ACTION PRINCIPAL) -->
-      <div class="pt-4 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-        <a href="https://wa.me/5493772636749?text=Hola,%20tengo%20una%20orden%20médica%20y%20quisiera%20enviarla%20para%20presupuesto%20o%20indicaciones%20(Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer pulse-glow-emerald w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-black text-xl sm:text-2xl rounded-2xl shadow-xl transition-all active:scale-95">
-          <svg class="w-8 h-8 fill-current shrink-0 animate-bounce" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+      <!-- BOTÓN GIGANTE PULSÁTIL CON DESTELLO (CTA PRINCIPAL) -->
+      <div class="pt-3 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+        <a href="https://wa.me/5493772636749?text=Hola,%20tengo%20una%20orden%20médica%20y%20quisiera%20enviarla%20para%20presupuesto%20o%20indicaciones%20(Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer pulse-glow-emerald w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-black text-xl sm:text-2xl rounded-2xl shadow-2xl transition-all active:scale-95">
+          <svg class="w-8 h-8 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
           <span>Enviar Foto de Orden Médica</span>
         </a>
 
-        <a href="#perfiles" class="px-6 py-4 bg-white/10 hover:bg-white/20 text-white font-bold text-lg rounded-2xl border border-white/20 backdrop-blur-md transition-colors text-center">
+        <a href="#perfiles" class="px-6 py-4 bg-black/40 hover:bg-black/60 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md transition-colors text-center shadow-lg">
           Ver Todos los Perfiles ↓
         </a>
       </div>
@@ -148,9 +137,26 @@
   </header>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main class="max-w-4xl mx-auto px-4 pt-10">
+  <main class="max-w-5xl mx-auto px-4 pt-10">
 
-    <!-- SECCIÓN: PERFILES DESTACADOS Y PROMOCIONES CON DISTINTOS COLORES -->
+    <!-- DESTACADO RÁPIDO: ACCESO A LOS NUEVOS PANELES ESPECIALIZADOS -->
+    <div class="mb-10 p-5 sm:p-6 bg-gradient-to-r from-slate-900 to-emerald-950 text-white rounded-3xl shadow-xl border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="space-y-1 text-center md:text-left">
+        <span class="text-emerald-400 font-extrabold text-xs uppercase tracking-wider">Paneles Especializados</span>
+        <h3 class="text-xl sm:text-2xl font-black">Marcadores Tumorales · Perfil Hombres · Perfil Mujeres con Exudado</h3>
+        <p class="text-slate-300 text-sm sm:text-base">Consultá presupuesto inmediato y preparación requerida por WhatsApp.</p>
+      </div>
+      <a 
+        href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20los%20Paneles%20Especializados%20(Marcadores%20Tumorales,%20Hombres%20o%20Mujeres%20con%20Exudado)" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="w-full md:w-auto px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-base rounded-2xl shadow-lg transition-transform active:scale-95 text-center shrink-0"
+      >
+        Consultar al 3772-636749
+      </a>
+    </div>
+
+    <!-- SECCIÓN: PERFILES CON FOTOGRAFÍA SUPERIOR CLARA Y VISIBLE -->
     <section id="perfiles" class="scroll-mt-20">
       
       <div class="mb-8 text-center sm:text-left">
@@ -161,325 +167,436 @@
         <p class="text-slate-600 text-base sm:text-lg mt-1">Elegí tu chequeo y consultá precio o turno por WhatsApp en el acto:</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        
-        <!-- 1. VERDE ESMERALDA: Chequeo Clínico Completo -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-emerald-300 hover:border-emerald-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-black rounded-lg">
-                ★ MÁS ELEGIDO
-              </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
-            </div>
-            <h3 class="text-2xl font-black text-emerald-950">Perfil Clínico Completo</h3>
-            <p class="text-xs font-bold text-emerald-700 uppercase tracking-wide mt-0.5">Chequeo Anual de Rutina</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> Hemograma completo, Glucemia, Colesterol Total, HDL, LDL, Triglicéridos, Hepatograma, Uremia, Creatinina y Orina completa.
-            </p>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Clínico%20Completo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
+        <!-- 1. PERFIL MUJERES INTEGRAL CON EXUDADO VAGINAL -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-fuchsia-400 hover:border-fuchsia-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_women_1790700255647.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80';"
+              alt="Perfil Integral Mujeres con Exudado" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-fuchsia-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
+                ★ MUJER & EXUDADO VAGINAL
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno / 48 hs abstinencia
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Ginecológico, Infeccioso y Hormonal
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Integral Mujeres + Exudado Vaginal</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> Exudado Vaginal completo (fresco y coloración de Gram para diagnóstico de Vaginosis, Trichomonas, Candida, Gardnerella), Cultivo e Identificación bacteriológica con Antibiograma, más Hemograma completo, Ferritina sérica, Subunidad Beta HCG, Perfil Hormonal (FSH, LH, Estradiol, Progesterona, Prolactina) y Urocultivo.
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Integral%20Mujeres%20con%20Exudado%20Vaginal%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-fuchsia-600 to-pink-600 hover:from-fuchsia-500 hover:to-pink-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
 
-        <!-- 2. VIOLETA / PÚRPURA: Perfil Tiroideo -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-purple-300 hover:border-purple-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-xs sm:text-sm font-black rounded-lg">
+        <!-- 2. PERFIL COMPLETO HOMBRES -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-blue-500 hover:border-blue-700 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_men_1790700320153.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80';"
+              alt="Perfil Completo Hombres" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-blue-700 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
+                ★ HOMBRES INTEGRAL
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Salud Masculina, Vitalidad y Metabolismo
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Completo Hombres</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> Hemograma completo, Glucemia, Perfil Lipídico (Colesterol Total, HDL, LDL, Triglicéridos), Hepatograma, Uricemia (Gota), Uremia, Creatinina, Testosterona Total y Libre, PSA Total prostático, TSH Ultrasensible y Orina Completa.
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Completo%20Hombres%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-blue-700 to-cyan-700 hover:from-blue-600 hover:to-cyan-600 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. PANEL MARCADORES TUMORALES -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-rose-400 hover:border-rose-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_tumor_1790700233694.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80';"
+              alt="Panel Marcadores Tumorales" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-rose-700 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
+                ★ PREVENCIÓN ONCOLÓGICA
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Detección Precoz y Monitoreo Onco-Bioquímico
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Panel Marcadores Tumorales</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> PSA Total y Libre (Próstata), CEA (Antígeno Carcinoembrionario - Colon/Gastrointestinal), CA 125 (Ovario/Ginecológico), CA 15-3 (Mama), CA 19-9 (Páncreas y Vía Biliar), y AFP (Alfa-fetoproteína - Hígado y Células Germinales).
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Panel%20Marcadores%20Tumorales%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-rose-700 to-red-600 hover:from-rose-600 hover:to-red-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. PERFIL PRÓSTATA Y SALUD UROLÓGICA (NUEVA IMAGEN) -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-indigo-400 hover:border-indigo-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_prostate_1790700220846.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80';"
+              alt="Perfil Próstata y Salud Urológica" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-indigo-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
+                PRÓSTATA +40
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                4 hs ayuno (48 hs sin eyaculación)
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Control Urológico Preventivo
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Próstata y Salud Urológica</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> PSA Total, PSA Libre, Relación Porcentual PSA Libre/Total, Testosterona Total, Glucemia, Ácido Úrico, Uremia, Creatinina y Sedimento Urinario con búsqueda de hematíes.
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Próstata%20y%20Salud%20Urológica%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-indigo-600 to-blue-700 hover:from-indigo-500 hover:to-blue-600 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. PERFIL CLÍNICO COMPLETO -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-emerald-400 hover:border-emerald-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_wellness_1790699283612.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80';"
+              alt="Perfil Clínico Completo" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-emerald-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
+                CHEQUEO RUTINA ANUAL
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Chequeo Preventivo General
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Clínico Completo</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> Hemograma completo, Glucemia, Colesterol Total, HDL, LDL, Triglicéridos, Hepatograma (GOT, GPT, Bilirrubinas), Uremia, Creatinina y Orina completa.
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Clínico%20Completo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. PERFIL TIROIDEO & ENERGÍA -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-purple-400 hover:border-purple-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" 
+              alt="Perfil Tiroideo y Energía" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-purple-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
                 HORMONAL & METABOLISMO
               </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
             </div>
-            <h3 class="text-2xl font-black text-purple-950">Perfil Tiroideo & Energía</h3>
-            <p class="text-xs font-bold text-purple-700 uppercase tracking-wide mt-0.5">Control de Tiroides y Peso</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> TSH ultrasensible, T4 Libre, T3 y Anticuerpos Anti-TPO. Ideal para fatiga, control de peso, caída de cabello o medicación.
-            </p>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Control de Tiroides y Peso
+            </div>
           </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Tiroideo%20y%20Energía%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Tiroideo & Energía</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> TSH ultrasensible, T4 Libre, T3 y Anticuerpos Anti-TPO. Ideal ante fatiga, caída de cabello, cambios de peso o control de medicación (Levotiroxina).
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Tiroideo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
 
-        <!-- 3. AZUL OCÉANO: Perfil Deportivo & Gimnasio -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-sky-300 hover:border-sky-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-sky-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 text-xs sm:text-sm font-black rounded-lg">
+        <!-- 7. PERFIL DEPORTIVO & GYM -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-sky-400 hover:border-sky-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="images/bg_profile_fitness_1790699310811.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80';"
+              alt="Perfil Deportivo y Gym" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-sky-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
                 APTO FÍSICO & RENDIMIENTO
               </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
             </div>
-            <h3 class="text-2xl font-black text-sky-950">Perfil Deportivo & Gym</h3>
-            <p class="text-xs font-bold text-sky-700 uppercase tracking-wide mt-0.5">Control Muscular y Electrolitos</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> Hemograma, Ionograma (Sodio/Potasio), CPK muscular, Magnesio, Ferremia, Ferritina sérica, Glucemia y Hepatograma.
-            </p>
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Control Muscular y Electrolitos
+            </div>
           </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Deportivo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-sky-600 hover:bg-sky-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Deportivo & Gym</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> Hemograma, Ionograma plasmático (Sodio/Potasio), CPK muscular (daño y recuperación), Magnesio, Ferremia, Ferritina sérica, Glucemia y Hepatograma.
+              </p>
+            </div>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Deportivo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
 
-        <!-- 4. ÁMBAR / DORADO: Vitamina D e Inmunidad -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-amber-300 hover:border-amber-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs sm:text-sm font-black rounded-lg">
+        <!-- 8. PERFIL VITAMINA D & DEFENSAS -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-amber-400 hover:border-amber-600 shadow-xl hover:shadow-2xl transition-all group flex flex-col justify-between">
+          <div class="h-48 sm:h-52 w-full overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
+              alt="Perfil Vitamina D y Defensas" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1.5 bg-amber-600 text-white text-xs sm:text-sm font-black rounded-lg shadow-md">
                 DEFENSAS & HUESOS
               </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
             </div>
-            <h3 class="text-2xl font-black text-amber-950">Perfil Vitamina D & Defensas</h3>
-            <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mt-0.5">Inmunidad y Salud Ósea</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> Vitamina D (25-OH), Vitamina B12, Calcio iónico, Fósforo, Zinc y Ferritina sérica.
-            </p>
-          </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Vitamina%20D%20e%20Inmunidad%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
-        </div>
-
-        <!-- 5. ROJO CORAL: Perfil Cardiovascular -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-rose-300 hover:border-rose-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-rose-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-rose-100 text-rose-900 text-xs sm:text-sm font-black rounded-lg">
-                CORAZÓN & ARTERIAS
+            <div class="absolute top-3 right-3 max-w-[55%] text-right">
+              <span class="inline-block text-xs font-bold text-slate-900 bg-white/95 px-3 py-1 rounded-full shadow-md">
+                8 hs ayuno
               </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">12 hs ayuno</span>
             </div>
-            <h3 class="text-2xl font-black text-rose-950">Perfil Cardiovascular</h3>
-            <p class="text-xs font-bold text-rose-700 uppercase tracking-wide mt-0.5">Riesgo Arterial y Presión</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> Perfil lipídico completo, Apolipoproteínas, Proteína C Reactiva Ultrasensible (PCR-us), Glucemia y Ácido Úrico.
-            </p>
-          </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Cardiovascular%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-rose-600 hover:bg-rose-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
-        </div>
-
-        <!-- 6. TEAL / VERDE AGUA: Perfil Hepático y Digestivo -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-teal-300 hover:border-teal-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-teal-100 text-teal-900 text-xs sm:text-sm font-black rounded-lg">
-                HÍGADO & DIGESTIVO
-              </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-extrabold text-sm sm:text-base drop-shadow-md">
+              Inmunidad y Salud Ósea
             </div>
-            <h3 class="text-2xl font-black text-teal-950">Perfil Hepático y Digestivo</h3>
-            <p class="text-xs font-bold text-teal-700 uppercase tracking-wide mt-0.5">Control de Grasa y Medicación</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> Hepatograma completo (GOT, GPT, FAL, Bilirrubinas Total y Directa), Gamma GT, Proteínas Totales y Albúmina.
-            </p>
           </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Hepático%20y%20Digestivo%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-teal-600 hover:bg-teal-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
-        </div>
-
-        <!-- 7. ÍNDIGO / AZUL PROFUNDO: Perfil Masculino & Próstata -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-indigo-300 hover:border-indigo-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-900 text-xs sm:text-sm font-black rounded-lg">
-                HOMBRES +40
-              </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">4 hs ayuno</span>
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div>
+              <h3 class="text-2xl font-black text-slate-900 leading-tight">Perfil Vitamina D & Defensas</h3>
+              <p class="text-slate-600 text-base mt-2.5 leading-relaxed">
+                <strong>Incluye:</strong> Vitamina D (25-OH), Vitamina B12, Calcio iónico, Fósforo sérico, Zinc y Ferritina sérica para evaluar defensas del organismo.
+              </p>
             </div>
-            <h3 class="text-2xl font-black text-indigo-950">Perfil Próstata y Vitalidad</h3>
-            <p class="text-xs font-bold text-indigo-700 uppercase tracking-wide mt-0.5">Chequeo Urológico Preventivo</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> PSA Total y PSA Libre, Testosterona Total, Glucemia, Ácido Úrico y Sedimento Urinario.
-            </p>
+            <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Vitamina%20D%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
+              <span>Pedir Precio por WhatsApp</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
           </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Próstata%20y%20Vitalidad%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
-        </div>
-
-        <!-- 8. FUCSIA / ROSADO: Perfil Ginecológico y Fertilidad -->
-        <div class="p-6 bg-white rounded-3xl border-2 border-pink-300 hover:border-pink-600 shadow-md hover:shadow-xl transition-all space-y-4 flex flex-col justify-between relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-pink-100/60 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform"></div>
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-pink-100 text-pink-900 text-xs sm:text-sm font-black rounded-lg">
-                MUJER & FERTILIDAD
-              </span>
-              <span class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">8 hs ayuno</span>
-            </div>
-            <h3 class="text-2xl font-black text-pink-950">Perfil Gineco-Hormonal</h3>
-            <p class="text-xs font-bold text-pink-700 uppercase tracking-wide mt-0.5">Ciclo, Menopausia y Control</p>
-            <p class="text-slate-600 text-base mt-3 leading-relaxed">
-              <strong>Incluye:</strong> FSH, LH, Estradiol, Progesterona, Prolactina, Ferritina y Hemograma completo.
-            </p>
-          </div>
-
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20por%20el%20Perfil%20Gineco-Hormonal%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-pink-600 hover:bg-pink-700 text-white font-black text-lg rounded-2xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-            <span>Pedir Precio por WhatsApp</span>
-            <span class="text-xl">→</span>
-          </a>
         </div>
 
       </div>
     </section>
 
-    <!-- EXTRACCIÓN A DOMICILIO CON FOTO DE FONDO -->
-    <section class="mt-14 relative rounded-3xl overflow-hidden shadow-xl border border-indigo-900">
-      <!-- Imagen de fondo con gradiente superpuesto -->
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80');"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-indigo-950/95 via-indigo-950/90 to-indigo-900/80"></div>
+    <!-- EXTRACCIÓN A DOMICILIO CON FOTO CLARA DE FONDO -->
+    <section class="mt-14 relative rounded-3xl overflow-hidden shadow-2xl border-2 border-indigo-700">
+      <div 
+        class="absolute inset-0 bg-cover bg-center" 
+        style="background-image: url('images/bg_home_care_1790682124783.jpg'), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80');"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-950/90 via-indigo-950/75 to-indigo-900/60"></div>
 
       <div class="relative z-10 p-7 sm:p-10 space-y-4 text-white">
-        <span class="inline-block px-3 py-1 bg-indigo-500/30 text-indigo-300 font-black text-xs sm:text-sm uppercase tracking-wider rounded-lg border border-indigo-400/30">
+        <span class="inline-block px-3 py-1.5 bg-indigo-600 text-white font-black text-xs sm:text-sm uppercase tracking-wider rounded-lg shadow-md border border-indigo-400">
           Servicio en tu hogar
         </span>
-        <h2 class="text-3xl sm:text-4xl font-black text-white">Extracciones a Domicilio en Paso de los Libres</h2>
-        <p class="text-indigo-100 text-base sm:text-xl max-w-2xl leading-relaxed">
-          Un bioquímico de nuestro equipo va a tu domicilio con materiales descartables estériles y valija térmica de refrigeración. Ideal para personas mayores, niños o quienes prefieran la comodidad de su casa.
+        <h2 class="text-3xl sm:text-4xl font-black text-white" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
+          Extracciones a Domicilio en Paso de los Libres
+        </h2>
+        <p class="text-white text-base sm:text-xl max-w-2xl leading-relaxed font-medium" style="text-shadow: 0 1px 4px rgba(0,0,0,0.9);">
+          Un bioquímico de nuestro equipo va a tu domicilio con materiales descartables estériles y valija térmica de refrigeración. Ideal para personas mayores, niños, personas con movilidad reducida o quienes prefieran la comodidad de su casa.
         </p>
 
         <div class="pt-2">
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20solicitar%20un%20turno%20de%20extracción%20a%20domicilio%20en%20Paso%20de%20los%20Libres" target="_blank" rel="noopener noreferrer" class="btn-shimmer pulse-glow-emerald w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-xl rounded-2xl shadow-xl transition-all active:scale-95">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-            <span>Pedir Bioquímico a Domicilio por WhatsApp</span>
+          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20solicitar%20un%20turno%20de%20extracción%20a%20domicilio%20en%20Paso%20de%20los%20Libres" target="_blank" rel="noopener noreferrer" class="btn-shimmer inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-black text-xl rounded-2xl shadow-xl transition-transform active:scale-95">
+            <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+            <span>Pedir Bioquímico a Domicilio</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- GUÍA RÁPIDA DE AYUNO -->
-    <section class="mt-14 pt-8 border-t border-slate-300">
-      <div class="mb-6">
-        <span class="text-slate-500 font-extrabold text-sm uppercase tracking-wider">Preparación previa</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">¿Cuántas horas de ayuno necesitás?</h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="p-5 bg-white rounded-2xl border-2 border-slate-200 shadow-sm flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 font-black flex items-center justify-center text-lg shrink-0">
-            8 hs
-          </div>
-          <div>
-            <strong class="text-lg text-slate-900 block font-bold">Rutina general</strong>
-            <p class="text-sm text-slate-600 mt-0.5">Glucemia, Hemograma, Hepatograma, Tiroides y la mayoría de los estudios comunes.</p>
-          </div>
-        </div>
-
-        <div class="p-5 bg-white rounded-2xl border-2 border-slate-200 shadow-sm flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 font-black flex items-center justify-center text-lg shrink-0">
-            12 hs
-          </div>
-          <div>
-            <strong class="text-lg text-slate-900 block font-bold">Colesterol y Triglicéridos</strong>
-            <p class="text-sm text-slate-600 mt-0.5">Perfil Lipídico estricto. Se permite tomar agua mineral en pequeñas cantidades.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBRAS SOCIALES / PREPAGAS -->
-    <section class="mt-14 pt-8 border-t border-slate-300">
-      <div class="text-center sm:text-left mb-6">
-        <span class="text-emerald-700 font-extrabold text-sm uppercase tracking-wider">Convenios y Obras Sociales</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Atendemos Prepagas, IOSCOR y Particulares</h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-1">Envianos foto de tu carnet o credencial por WhatsApp para validar tu cobertura en minutos:</p>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">IOSCOR</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">OSDE</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">Swiss Medical</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">PAMI</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">Galeno</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">Medifé</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-slate-200 font-black text-slate-800 text-base sm:text-lg shadow-sm">Sancor Salud</div>
-        <div class="p-4 bg-white rounded-2xl border-2 border-emerald-300 font-black text-emerald-800 text-base sm:text-lg shadow-sm bg-emerald-50/50">Particulares</div>
-      </div>
-    </section>
-
-    <!-- SEDE, DIRECCIÓN EXACTA Y CONTACTO -->
-    <section class="mt-14 pt-8 border-t border-slate-300">
-      <div class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-md space-y-5">
-        <div>
-          <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Ubicación y Atención</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Laboratorio Schvarzstein</h2>
-        </div>
+    <!-- UBICACIÓN, HORARIOS Y CONVENIOS -->
+    <section class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Tarjeta Dirección y Horarios -->
+      <div class="bg-white p-7 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-lg space-y-5">
+        <h3 class="text-2xl font-black text-slate-900 flex items-center gap-3">
+          <svg class="w-7 h-7 text-emerald-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Sede Central
+        </h3>
         
-        <div class="space-y-4 text-base sm:text-lg text-slate-700">
-          <div class="flex items-start gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-200">
-            <span class="text-2xl">📍</span>
-            <div>
-              <strong class="text-slate-900 block text-lg font-bold">Dirección en Paso de los Libres:</strong>
-              <span>Sarmiento 902</span><br>
-              <span class="text-slate-500 text-sm">Paso de los Libres, Corrientes, Argentina</span>
-            </div>
+        <div class="space-y-3 text-slate-700 text-lg">
+          <p>
+            <strong class="text-slate-900 block text-xl">Sarmiento 902</strong>
+            Paso de los Libres, Corrientes, Argentina.
+          </p>
+          
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider block">Horario de Atención</span>
+            <p class="font-semibold text-slate-800">Lunes a Viernes: 07:00 a 19:00 hs</p>
+            <p class="font-semibold text-slate-800">Sábados: 07:30 a 12:00 hs</p>
           </div>
 
-          <div class="flex items-start gap-3 p-4 bg-emerald-50 rounded-2xl border border-emerald-200">
-            <span class="text-2xl">📱</span>
-            <div>
-              <strong class="text-emerald-950 block text-lg font-bold">WhatsApp Directo:</strong>
-              <a href="https://wa.me/5493772636749" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-black text-2xl hover:underline">
-                3772-636749
-              </a>
-              <span class="block text-slate-500 text-sm mt-0.5">Consultas, cotizaciones y pedidos de turno al instante</span>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-200">
-            <span class="text-2xl">🕒</span>
-            <div>
-              <strong class="text-slate-900 block text-lg font-bold">Horarios de Extracción y Atención:</strong>
-              <span>Lunes a Viernes de 07:00 a 19:00 hs</span><br>
-              <span>Sábados de 07:30 a 12:30 hs</span>
-            </div>
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider block">Extracciones de Sangre</span>
+            <p class="font-bold text-emerald-800">07:00 a 10:30 hs (Con ayuno correspondiente)</p>
           </div>
         </div>
 
-        <div class="pt-2">
-          <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20para%20acercarme%20a%20Sarmiento%20902,%20Paso%20de%20los%20Libres" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg text-center rounded-2xl flex items-center justify-center gap-2 shadow-md">
-            Escribir a Sarmiento 902 por WhatsApp
-          </a>
-        </div>
+        <a href="https://maps.google.com/?q=Sarmiento+902,+Paso+de+los+Libres,+Corrientes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-emerald-700 font-extrabold hover:text-emerald-800 text-base">
+          <span>Ver en Google Maps</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </div>
+
+      <!-- Tarjeta Obras Sociales y Prepagas -->
+      <div class="bg-white p-7 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-lg space-y-5">
+        <h3 class="text-2xl font-black text-slate-900 flex items-center gap-3">
+          <svg class="w-7 h-7 text-teal-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Obras Sociales & Prepagas
+        </h3>
+        
+        <p class="text-slate-600 text-base">
+          Atendemos con las principales coberturas de la provincia de Corrientes y a nivel nacional:
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-sm font-bold">
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">IOSCOR</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">PAMI</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">OSDE</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">SWISS MEDICAL</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">GALENO</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">MEDIFÉ</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">SANCOR SALUD</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-800 rounded-xl border border-slate-200">PARTICULARES</span>
+        </div>
+
+        <div class="pt-2 border-t border-slate-100">
+          <p class="text-sm text-slate-500">
+            ¿No encontrás tu obra social? Escribinos al WhatsApp y te confirmamos cobertura al instante.
+          </p>
+        </div>
+
+        <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20si%20reciben%20mi%20obra%20social%20o%20prepaga" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-teal-700 font-extrabold hover:text-teal-800 text-base">
+          <span>Consultar cobertura por WhatsApp</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
     </section>
 
   </main>
 
-  <!-- BARRA FIJA INFERIOR PARA TELÉFONOS CON BOTÓN PULSÁTIL Y DESTELLO -->
-  <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 z-50 md:hidden shadow-2xl">
-    <a href="https://wa.me/5493772636749?text=Hola,%20deseo%20consultar%20por%20un%20análisis%20en%20Laboratorio%20Schvarzstein%20(Sarmiento%20902,%20Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer pulse-glow-emerald w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-center rounded-2xl text-lg flex items-center justify-center gap-2 shadow-lg">
-      <svg class="w-6 h-6 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-      <span>WhatsApp: 3772-636749</span>
+  <!-- FOOTER -->
+  <footer class="mt-16 bg-slate-900 text-white py-10 px-4 text-center">
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="flex items-center justify-center gap-2 text-xl font-black">
+        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+        <span>Laboratorio Schvarzstein</span>
+      </div>
+      <p class="text-slate-400 text-base">
+        Bioquímica Clínica y Diagnóstico de Precisión · Sarmiento 902, Paso de los Libres, Corrientes, Argentina
+      </p>
+      <p class="text-slate-500 text-sm">
+        WhatsApp de Consultas: <strong class="text-slate-300">3772-636749</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- BARRA FIJA PERMANENTE INFERIOR PARA TELÉFONOS MÓVILES -->
+  <aside aria-label="Contacto rápido" class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-lg border-t border-slate-300 shadow-2xl">
+    <a href="https://wa.me/5493772636749?text=Hola,%20quisiera%20consultar%20precios%20o%20enviar%20orden%20médica%20(Paso%20de%20los%20Libres)" target="_blank" rel="noopener noreferrer" class="btn-shimmer pulse-glow-emerald w-full py-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 text-white font-black text-xl rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-600/40 active:scale-95 transition-transform">
+      <svg class="w-7 h-7 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.452.744.97 1.205.666.594 1.228.777 1.402.864.173.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+      <span>Escribir por WhatsApp (3772-636749)</span>
     </a>
-  </div>
+  </aside>
 
 </body>
 </html>
