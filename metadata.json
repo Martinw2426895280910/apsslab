@@ -1,0 +1,6 @@
+{
+  "name": "Laboratorio Schvarzstein",
+  "description": "Landing page y portal interactivo para Laboratorio Schvarzstein: diagnóstico bioquímico, turnos online, consulta de resultados, catálogo de análisis y servicio a domicilio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
