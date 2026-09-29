@@ -12,32 +12,32 @@ Landing page para **Laboratorio Schvarzstein**, ubicada en **Paso de los Libres,
 
 ---
 
-## 📁 Archivos para Subir a GitHub
+## 📁 Archivos en esta Carpeta
 
 ```text
 lab-schvarzstein/
-├── index.html   ← Aplicación completa (todo en un solo archivo, listo para abrir o publicar)
-└── README.md    ← Instrucciones para subirlo a GitHub y GitHub Pages
+├── index.html     ← Aplicación completa (todo en un solo archivo, listo para abrir o publicar)
+├── vercel.json    ← Configuración para Vercel (despliegue estático instantáneo sin npm)
+└── README.md      ← Instrucciones paso a paso
 ```
 
 ---
 
-## 🚀 Pasos para Subir a GitHub y Publicar en GitHub Pages
+## 🚀 Despliegue en Vercel (Sin Errores de `npm install`)
 
-1. **Crear repositorio**: Ingresá a [github.com/new](https://github.com/new) y creá un repositorio público llamado `lab-schvarzstein`.
-2. **Subir archivos desde la consola**:
-   ```bash
-   cd lab-schvarzstein
-   git init
-   git add .
-   git commit -m "feat: landing paso de los libres sarmiento 902"
-   git branch -M main
-   git remote add origin https://github.com/TU-USUARIO/lab-schvarzstein.git
-   git push -u origin main
-   ```
-   *(O arrastrá `index.html` y `README.md` directamente desde la web de GitHub).*
+Si subís esta carpeta **`lab-schvarzstein`** a Vercel:
 
-3. **Publicar gratis**:
-   - En GitHub andá a **Settings** > **Pages**.
-   - En **Branch**, seleccioná `main` y hacé clic en **Save**.
-   - En 1 minuto tendrás tu web activa con enlace público gratuito: `https://TU-USUARIO.github.io/lab-schvarzstein/`.
+1. **Es un archivo HTML estático puro**: No requiere `npm install`, `vite` ni `esbuild`.
+2. En Vercel, al importar el proyecto:
+   - **Framework Preset**: Seleccioná **"Other"**.
+   - **Root Directory**: `lab-schvarzstein` (o la raíz si subiste solo esta carpeta).
+   - Dejá **Build Command** e **Install Command** vacíos o desmarcados (ya viene configurado con el archivo `vercel.json`).
+   - Hacé clic en **Deploy**. Se publica en 5 segundos.
+
+---
+
+## 🌐 Despliegue en GitHub Pages (Alternativa Gratis)
+
+1. En tu repositorio de GitHub, andá a **Settings** > **Pages**.
+2. En **Branch**, seleccioná `main` y hacé clic en **Save**.
+3. En 1 minuto tendrás tu web activa sin necesidad de compilar nada.
